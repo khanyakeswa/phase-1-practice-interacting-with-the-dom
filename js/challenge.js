@@ -13,13 +13,10 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(increaseCounter, 1000)
 
   minusButton.addEventListener('click', function () {
-    // const counterValue = Number(counter.textContent()) ++;
     console.log(counterValue)
   })
 })
 
 addButton.addEventListener('click', function () {
-  // console.log(counterValue)
-
   counter.innerHTML = counterValue++
 })
