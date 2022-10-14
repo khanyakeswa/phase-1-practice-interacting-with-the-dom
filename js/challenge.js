@@ -3,20 +3,22 @@ const minusButton = document.getElementById('minus')
 const counter = document.getElementById('counter')
 let counterValue = 0 /*Number(counter.textContent()) ++;*/
 function increaseCounter() {
-  counterValue++
-  counter.textContent = counterValue
+  b = parseInt(counter.innerText)
+  counter.innerText = b + 1
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  counter.innerHTML = counterValue
+  counter.textContent = counterValue
 
-  setInterval(increaseCounter, 1000)
+  // setInterval(increaseCounter, 1000)
 
   minusButton.addEventListener('click', function () {
-    console.log(counterValue)
+    b = parseInt(counter.innerText)
+    counter.innerText = b - 1
   })
 })
 
 addButton.addEventListener('click', function () {
-  counter.innerHTML = counterValue++
+  b = parseInt(counter.innerText)
+  counter.innerText = b + 1
 })
